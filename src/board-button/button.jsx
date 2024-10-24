@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 const Square = ({ value }) => {
   const handleClick = () => {
     console.log("Button is clickced!");
@@ -12,6 +13,10 @@ const Square = ({ value }) => {
       </button>
     </>
   );
+};
+
+Square.propTypes = {
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired, // Expect either string or number
 };
 
 export default Square;
