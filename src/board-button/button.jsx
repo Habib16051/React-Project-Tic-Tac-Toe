@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
-const Square = () => {
-  const [value, setValue] = useState(null);
+// import { useState } from "react";
+const Square = ({ value }) => {
+  //   const [value, setValue] = useState(null);
   //   const handleClick = () => {
   //     console.log("Button is clickced!");
 
@@ -10,7 +10,10 @@ const Square = () => {
       {/* Implement arrow function */}
       <button
         onClick={() => {
-          setValue("X");
+          {
+            value;
+          }
+          //   setValue("X");
         }}
         className="bg-white border border-gray-500 h-12 w-12 m-1 leading-9 text-lg"
       >
