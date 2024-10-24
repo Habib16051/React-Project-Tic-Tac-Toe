@@ -1,12 +1,15 @@
 import PropTypes from "prop-types";
 const Square = ({ value }) => {
-  const handleClick = () => {
-    console.log("Button is clickced!");
-  };
+  //   const handleClick = () => {
+  //     console.log("Button is clickced!");
+  //
   return (
     <>
+      {/* Implement arrow function */}
       <button
-        onClick={handleClick}
+        onClick={() => {
+          console.log("Clicked!");
+        }}
         className="bg-white border border-gray-500 h-12 w-12 m-1 leading-9 text-lg"
       >
         {value}
