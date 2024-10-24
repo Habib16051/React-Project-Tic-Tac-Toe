@@ -9,23 +9,23 @@ function App() {
 
       <br />
 
-      <div className="text-center">
-        <div>
-          <Square value="1" />
-          <Square value="2" />
-          <Square value="3" />
+      <div className="bg-green-200 rounded-md">
+        <div className="flex justify-center">
+          <Square />
+          <Square />
+          <Square />
         </div>
 
-        <div>
-          <Square value="4" />
-          <Square value="5" />
-          <Square value="6" />
+        <div className="flex justify-center">
+          <Square />
+          <Square />
+          <Square />
         </div>
 
-        <div>
-          <Square value="7" />
-          <Square value="8" />
-          <Square value="9" />
+        <div className="flex justify-center">
+          <Square />
+          <Square />
+          <Square />
         </div>
       </div>
     </>
