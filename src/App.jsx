@@ -4,12 +4,22 @@ import PropTypes from "prop-types";
 
 function App() {
   const [squares, setSquares] = useState(Array(9).fill(null));
+  const [xIsNext, setXIsNext] = useState(true);
   function handleClick(i) {
+    if (squares[i]) {
+      return; // Skip if square is already filled
+    }
     // Logic to handle clicking on square
     const nextSquares = squares.slice();
-    nextSquares[i] = "X";
+    if (xIsNext) {
+      nextSquares[i] = "X";
+    } else {
+      nextSquares[i] = "O";
+    }
     setSquares(nextSquares); // Update squares state with new array
+    setXIsNext(!xIsNext); // Switch turn between X and O
   }
+
   return (
     <>
       <div className="text-center p-5 bg-green-400">
